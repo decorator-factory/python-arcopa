@@ -115,9 +115,6 @@ class Spec:
 
         return self
 
-    # def __repr__(self):
-    #     return f"{self.__class__.__qualname__}(...)"
-
 
 @dataclass
 class End(Spec):
@@ -265,9 +262,6 @@ class Either(Spec):
     def match(self, string: str):
         for spec in self.options:
             yield from spec.match(string)
-
-    def __repr__(self):
-        return f"EitherSpec({'|'.join(map(str,self.options))})"
 
 
 @dataclass
