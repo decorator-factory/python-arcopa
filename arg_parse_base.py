@@ -83,9 +83,9 @@ class Spec:
         all possible matches for this spec.
 
         Sequence([
-            Either([String(), Integer()],
-            Either([String(), Integer()]
-        )]).match("25 666") ->
+            Either([String(), Integer()]),
+            Either([String(), Integer()])
+        ]).match("25 666") ->
             ["25", "666"],
             ["25", 666],
             [25, "666"],
